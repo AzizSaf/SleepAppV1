@@ -1,0 +1,576 @@
+@font-face {
+  src: url('/Src/Font/ComfortaRegular.ttf');
+  font-family: ComfortaRegular;
+}
+:root {
+  --bg: #000101;
+  --bg2: #496EF0;
+  --text_color1: #FEFEFE;
+  --text_color2: #496EF0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ComfortaRegular";
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+}
+html {
+  scroll-behavior: smooth;
+}
+.AppCover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+.WellcomePage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 80px;
+}
+.WellcomePage img {
+  width: 130px;
+}
+.WellcomePage h1 {
+  position: absolute;
+  top: 80px;
+  color: var(--text_color1);
+}
+.WellcomePage h2 {
+  color: var(--text_color1);
+}
+.WellcomePage button {
+  width: 120px;
+  height: 50px;
+  background: var(--bg2);
+  color: var(--text_color1);
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 150px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.LoginPage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  position: absolute;
+  z-index: 19;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+.LoginTitle {
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+.LoginTitle > h1 {
+  font-size: 2.5rem;
+  color: var(--text_color1);
+}
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+}
+.Form > input {
+  width: 70vw;
+  height: 50px;
+  border: 1.5px solid var(--text_color1);
+  outline: none;
+  color: var(--text_color1);
+  background: transparent;
+  padding: 10px 20px;
+  cursor: var(--text_color1);
+  border-radius: 10px;
+}
+.Form2 {
+  width: 75vw;
+  height: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 20px 30px;
+}
+.Form2 > input {
+  
+}
+.Form2 > label {
+  color: var(--text_color1);
+  font-size: 12px;
+}
+.LoginPage > .loginbtn {
+  width: 120px;
+  height: 50px;
+  background: var(--bg2);
+  color: var(--text_color1);
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 150px;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  top: 50px;
+}
+.error {
+  border: 1.5px solid red!important;
+}
+.HomePage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  overflow: auto;
+  position: relative;
+}
+.NavBar {
+  width: 100%;
+  height: 70px;
+  background: var(--bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.NavBar img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 25px;
+}
+.NavBar h1 {
+  font-size: 1.3rem;
+  color: var(--text_color1);
+}
+.MenuBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 11;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.MenuItems {
+  width: 50%;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.CloseMenu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.AppLogo {
+  width: 100%;
+  height: 200px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+.AppLogo img {
+  width: 100px;
+  height: 100px;
+}
+.AppName {
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AppName p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--text_color1);
+}
+
+
+
+
+
+
+.CopyRight {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.CopyRight small {
+  color: var(--text_color1);
+  font-size: 10px;
+  opacity: 0.7;
+}
+.space {
+  width: 100%;
+  height: 11%;
+  background: transparent;
+}
+.Sounds {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.SoundsTitle {
+  width: 100%;
+  height: 16%;
+  background: var(--bg);
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 25px;
+  position: relative;
+}
+.SoundsTitle h1 {
+  color: var(--text_color1);
+  font-size: 1.5rem;
+}
+.SoundsByType {
+  width: 100%;
+  height: auto;
+  max-height: 83%;
+  background: var(--bg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  overflow: scroll;
+  position: relative;
+}
+.SoundBox {
+  width: 46%;
+  height: 205px;
+  background: black;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid #FFFFFF21;
+}
+.SoundBox img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.SoundInfo {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 5px 10px;
+}
+.SoundInfo p {
+  color: var(--text_color1);
+}
+.SoundInfo small {
+  color: var(--text_color1);
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/*** Music List Box ***/
+.MusicList {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background: var(--bg);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 11;
+  transition: right 0.4s;
+}
+.MusicListBar {
+  width: 100%;
+  height: 9%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MusicListBar img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 25px;
+}
+.MusicListBar h1 {
+  font-size: 1.3rem;
+  color: var(--text_color1);
+}
+.MusicDiv {
+  width: 100%;
+  height: 91%;
+  background: transparent;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.Music {
+  width: 90%;
+  height: 70px;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Music img:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  position: absolute;
+  left: 25px;
+  border-radius: 10px;
+}
+.Music p {
+  position: relative;
+  color: var(--text_color1);
+}
+.Music img:nth-child(3) {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 25px;
+}
+.Musichr {
+  width: 50%;
+  height: 1px;
+  background: #FFFFFF3B;
+  border: none;
+}
+
+
+
+/*** Music Player ***/
+.MusicPlayer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background: var(--bg);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 12;
+  transition: right 0.4s;
+}
+.MusicPlayeBar {
+  width: 100%;
+  height: 9%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MusicPlayeBar img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 25px;
+}
+.MusicPlayeBar h1 {
+  font-size: 1.3rem;
+  color: var(--text_color1);
+}
+.MPlayerItems {
+  width: 100%;
+  height: 91%;
+  background: var(--bg);
+  overflow: auto;
+  position: relative;
+}
+.MusicCover {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 50px 0 20px 0;
+} 
+.MusicCover img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.MusicName {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MusicName p {
+  font-size: 1.3rem;
+  color: var(--text_color1);
+  font-weight: bold;
+}
+.TimeLineBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 10px 0 0 0;
+  background: transparent;
+}
+.TimeLine {
+  width: 70%;
+  height: 6px;
+  background:var(--text_color1);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: var(--bg2);
+  transition: 0.3s;
+}
+.TimeBox {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.TimeBox span {
+  color: var(--text_color1);
+  font-weight: 500;
+}
+.AudioContol {
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.AudioContol img {
+  width: 30px;
+  height: 30px;
+}
+.container {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--bg2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+  --color: white;
+  --size: 30px;
+}
+.container .play {
+  position: absolute;
+  animation: keyframes-fill .5s;
+  margin-left: 2px;
+}
+.container .pause {
+  position: absolute;
+  display: none;
+  animation: keyframes-fill .5s;
+}
+.container input:checked ~ .play {
+  display: none;
+}
+.container input:checked ~ .pause {
+  display: block;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+@keyframes keyframes-fill {
+  0% {
+    transform: rotate(-180deg) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.2);
+  }
+}
+.MusicAudio {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  overflow: hidden;
+}
+.audio {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
