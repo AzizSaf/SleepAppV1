@@ -44,7 +44,7 @@ function openProfileBox() {
   let UserImg = 
     document.createElement('div')
   UserImg.innerHTML = 
-  `<img src="/Src/ProfileBox/user.png">`
+  `<img src="./Src/ProfileBox/user.png">`
   UserImg.className = 'UserImg'
   ProfileBox.append(UserImg)
   let getUserData = JSON.parse(localStorage.getItem('UserInfo'))
@@ -66,7 +66,7 @@ function openProfileBox() {
   ProfileBox.append(UserInfo)
   let Show =
     document.createElement('img')
-  Show.src = "/Src/ProfileBox/show.png"
+  Show.src = "./Src/ProfileBox/show.png"
   Show.className = 'ShowPasword'
   Show.setAttribute('onclick', 'showPassword()')
   UserInfo.append(Show)
@@ -188,9 +188,9 @@ function openAboutBox() {
   Media.className = 'Media'
   Media.innerHTML = 
   `<p>Follow Us</p>
-  <a target="_blanc" href="#"><img src="/Src/AboutBox/facebook.png"></a>
-  <a target="_blanc" href="#"><img src="/Src/AboutBox/instagram.png"></a>
-  <a target="_blanc" href="#"><img src="/Src/AboutBox/twitter.png"></a>`
+  <a target="_blanc" href=""><img src="./Src/AboutBox/facebook.png"></a>
+  <a target="_blanc" href=""><img src="./Src/AboutBox/instagram.png"></a>
+  <a target="_blanc" href=""><img src="./Src/AboutBox/twitter.png"></a>`
   AboutDiv.append(Media)
 }
 function closeAboutBox() {
