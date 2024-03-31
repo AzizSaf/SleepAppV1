@@ -5,6 +5,7 @@
 :root {
   --bg: #000101;
   --bg2: #496EF0;
+  --bg3: #121212;
   --text_color1: #FEFEFE;
   --text_color2: #496EF0;
 }
@@ -158,7 +159,7 @@ html {
 }
 .NavBar {
   width: 100%;
-  height: 70px;
+  height: 12%;
   background: var(--bg);
   position: fixed;
   top: 0;
@@ -175,8 +176,13 @@ html {
   left: 25px;
 }
 .NavBar h1 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text_color1);
+  position: relative;
+  top: 2px;
+}
+.NavBar h1:first-letter {
+  color: var(--bg2);
 }
 .MenuBox {
   width: 100%;
@@ -196,12 +202,13 @@ html {
   flex-direction: column;
   align-items: center;
   position: relative;
+  gap: 5px;
 }
 .CloseMenu {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 20px;
+  top: 19px;
   right: 10px;
 }
 .AppLogo {
@@ -226,16 +233,30 @@ html {
   align-items: center;
 }
 .AppName p {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.2rem;
   color: var(--text_color1);
+  font-weight: bold;
 }
-
-
-
-
-
-
+.AppName p:first-letter {
+  color: var(--bg2);
+}
+.MenuBtns {
+  width: 80%;
+  height: 45px;
+  background: var(--text_color1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MenuBtns p {
+  color: var(--bg);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.MenuBtns p:first-letter {
+  color: var(--text_color2);
+}
 .CopyRight {
   width: 100%;
   position: absolute;
@@ -249,77 +270,7 @@ html {
   font-size: 10px;
   opacity: 0.7;
 }
-.space {
-  width: 100%;
-  height: 11%;
-  background: transparent;
-}
-.Sounds {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.SoundsTitle {
-  width: 100%;
-  height: 16%;
-  background: var(--bg);
-  display: flex;
-  align-items: flex-end;
-  padding: 10px 25px;
-  position: relative;
-}
-.SoundsTitle h1 {
-  color: var(--text_color1);
-  font-size: 1.5rem;
-}
-.SoundsByType {
-  width: 100%;
-  height: auto;
-  max-height: 83%;
-  background: var(--bg);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 20px;
-  overflow: scroll;
-  position: relative;
-}
-.SoundBox {
-  width: 46%;
-  height: 205px;
-  background: black;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border: 1.5px solid #FFFFFF21;
-}
-.SoundBox img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-.SoundInfo {
-  width: 100%;
-  height: 55px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-  padding: 5px 10px;
-}
-.SoundInfo p {
-  color: var(--text_color1);
-}
-.SoundInfo small {
-  color: var(--text_color1);
-  font-size: 10px;
-  opacity: 0.7;
-}
-
-/*** Music List Box ***/
-.MusicList {
+.ProfileBox {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -330,44 +281,423 @@ html {
   display: none;
   flex-direction: column;
   z-index: 11;
-  transition: right 0.4s;
+  transition: right 0.3s;
+}
+.ProfileNav {
+  width: 100%;
+  height: 12%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ProfileNav img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 25px;
+}
+.ProfileNav h1 {
+  font-size: 1.2rem;
+  color: var(--text_color1);
+  position: relative;
+  top: 2px;
+}
+.ProfileNav h1:first-letter {
+  color: var(--bg2);
+}
+.UserImg {
+  width: 100%;
+  height: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 20px 0;
+}
+.UserImg img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.UserName {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.UserName p {
+  color: var(--text_color1);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.UserInfo {
+  width: 100%;
+  height: auto;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 25px;
+  position: relative;
+}
+.UserInfo label {
+  color: var(--text_color1);
+  font-weight: bold;
+  font-size: 1rem;
+}
+.UserInfo label:first-letter {
+  color: var(--text_color2);
+}
+.UserInfo input {
+  width: 70%;
+  height: 50px;
+  border: 1.5px solid var(--text_color1);
+  outline: none;
+  color: var(--text_color1);
+  background: var(--bg3);
+  padding: 10px 20px;
+  cursor: var(--text_color1);
+  border-radius: 10px;
+  text-align: center;
+}
+.ShowPasword {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 23px;
+  right: 22%;
+}
+.UpdateBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background: var(--bg);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 11;
+  transition: right 0.3s;
+}
+.UpdateNav {
+  width: 100%;
+  height: 12%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.UpdateNav img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 25px;
+}
+.UpdateNav h1 {
+  font-size: 1.2rem;
+  color: var(--text_color1);
+  position: relative;
+  top: 2px;
+}
+.UpdateNav h1:first-letter {
+  color: var(--bg2);
+}
+.UpdateDiv {
+  width: 100%;
+  height: 88%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.Card {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  background: var(--bg3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.Card p {
+  color: var(--text_color1);
+  line-height: 1.4;
+}
+.Card p:first-letter {
+  color: var(--text_color2);
+}
+.Card span {
+  color: var(--text_color1);
+  opacity: 0.6;
+  font-size: 12px;
+}
+.AboutBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background: var(--bg);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 11;
+  transition: right 0.3s;
+}
+.AboutNav {
+  width: 100%;
+  height: 12%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutNav img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 25px;
+}
+.AboutNav h1 {
+  font-size: 1.2rem;
+  color: var(--text_color1);
+  position: relative;
+  top: 2px;
+}
+.AboutNav h1:first-letter {
+  color: var(--bg2);
+}
+.AboutDiv {
+  width: 100%;
+  height: 88%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+.AppInfo {
+  width: 85%;
+  height: auto;
+  padding: 10px;
+  background: var(--bg3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.AppInfo p {
+  color: var(--text_color1);
+  line-height: 1.2;
+}
+.AppInfo p:nth-child(1):first-letter {
+  color: var(--text_color2)!important;
+}
+.Media {
+  width: 85%;
+  height: auto;
+  padding: 55px 0 15px 0;
+  background: var(--bg3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+.Media p {
+  position: absolute;
+  top: 15px;
+  
+  font-size: 1.1rem;
+  color: var(--text_color1);
+}
+.Media p:first-letter {
+  color: var(--text_color2);
+}
+.Media a {
+  text-decoration: none;
+}
+.Media a img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.Media a img:hover {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(0%);
+}
+
+
+/*** Albums ***/
+.AlbomBox {
+  width: 100%;
+  height: 100%;
+  background: orange;
+  overflow: hidden;
+}
+.space {
+  width: 100%;
+  height: 12%;
+}
+.UserBox {
+  width: 100%;
+  height: 12%;
+  background: transparent;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+}
+.UserBox p {
+  color: var(--text_color1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.UserBox p strong {
+  color: var(--bg2);
+  font-size: 1.7rem;
+}
+.Discover {
+  width: 100%;
+  height: 4%;
+  background: var(--bg);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 25px;
+  position: relative;
+}
+.Discover h1 {
+  color: var(--text_color1);
+  font-size: 1.1rem;
+}
+.Discover h1:first-letter {
+  color: var(--bg2);
+}
+.AlbomsByType {
+  width: 100%;
+  height: auto;
+  max-height: 72%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  overflow: scroll;
+  position: relative;
+}
+.AlbomBox {
+  width: 46%;
+  height: auto;
+  background: var(--bg3);
+  border-radius: 10px 20px 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1.5px solid #FFFFFF21;
+  padding: 5px;
+}
+.AlbomBox img {
+  width: 100%;
+  height: 120px;
+  border-radius: 5px 15px 5px 5px;
+  object-fit: cover;
+}
+.AlbomInfo {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 0 10px;
+}
+.AlbomInfo p {
+  color: var(--text_color1);
+}
+.AlbomInfo p:first-letter {
+  color: var(--bg2);
+}
+.AlbomInfo small {
+  color: var(--text_color1);
+  font-size: 10px;
+  opacity: 0.5;
+  position: relative;
+  left: 1px;
+}
+
+
+
+/*** Music List Box ***/
+.MusicList {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--bg);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 11;
 }
 .MusicListBar {
   width: 100%;
-  height: 9%;
+  height: 12%;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .MusicListBar img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   left: 25px;
 }
 .MusicListBar h1 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text_color1);
+  position: relative;
+  top: 2px;
+}
+.MusicListBar h1:first-letter {
+  color: var(--bg2);
 }
 .MusicDiv {
   width: 100%;
-  height: 91%;
+  height: 88%;
   background: transparent;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
 }
 .Music {
   width: 90%;
-  height: 70px;
-  background: var(--bg);
+  min-height: 70px;
+  background: var(--bg3);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+  border-radius: 20px;
 }
 .Music img:nth-child(1) {
   width: 50px;
@@ -380,6 +710,14 @@ html {
 .Music p {
   position: relative;
   color: var(--text_color1);
+  line-height: 1.2;
+}
+.Music p:first-letter {
+  color: var(--bg2);
+}
+.Music small {
+  font-size: 12px;
+  opacity: 0.5;
 }
 .Music img:nth-child(3) {
   width: 45px;
@@ -408,29 +746,34 @@ html {
   display: none;
   flex-direction: column;
   z-index: 12;
-  transition: right 0.4s;
+  transition: right 0.3s;
 }
 .MusicPlayeBar {
   width: 100%;
-  height: 9%;
+  height: 12%;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .MusicPlayeBar img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   left: 25px;
 }
 .MusicPlayeBar h1 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text_color1);
+  position: relative;
+  top: 2px;
+}
+.MusicPlayeBar h1:first-letter {
+  color: var(--bg2);
 }
 .MPlayerItems {
   width: 100%;
-  height: 91%;
+  height: 88%;
   background: var(--bg);
   overflow: auto;
   position: relative;
@@ -442,11 +785,11 @@ html {
   align-items: center;
   justify-content: center;
   background: transparent;
-  padding: 50px 0 20px 0;
+  padding: 40px 0 30px 0;
 } 
 .MusicCover img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -458,9 +801,12 @@ html {
   justify-content: center;
 }
 .MusicName p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--text_color1);
   font-weight: bold;
+}
+.MusicName p:first-letter {
+  color: var(--bg2);
 }
 .TimeLineBox {
   width: 100%;
@@ -474,9 +820,9 @@ html {
 }
 .TimeLine {
   width: 70%;
-  height: 6px;
+  height: 5px;
   background:var(--text_color1);
-  border-radius: 5px;
+  border-radius: 2px;
   overflow: hidden;
   transition: 0.3s;
 }
@@ -510,6 +856,7 @@ html {
 .AudioContol img {
   width: 30px;
   height: 30px;
+  transition: 0.3s;
 }
 .container {
   width: 65px;
@@ -573,4 +920,7 @@ html {
   width: 100%;
   height: 100%;
   visibility: hidden;
+}
+.bluePlay {
+  color: red;
 }
